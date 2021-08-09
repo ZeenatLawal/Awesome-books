@@ -1,6 +1,5 @@
 const form = document.getElementById('booksForm');
 const display = document.getElementById('display');
-//const displayBooks = document.getElementByClassName('displayBooks');
 
 let myBooks = [];
 
@@ -11,11 +10,10 @@ function showBooks(books) {
 
 function removeBook(ev) {
   const buttonId = ev.target.id;
-  myBooks = myBooks.filter((y) => y!= myBooks[myBooks.findIndex(
-    (x) => x.id === parseInt(buttonId, 10))]);
-    console.log(myBooks);
+  myBooks = myBooks.filter((y) => y !== myBooks[myBooks.findIndex(
+    (x) => x.id === parseInt(buttonId, 10)),]);
   localStorage.setItem('myBooks', JSON.stringify(myBooks));
-  showBooks(myBooks); 
+  showBooks(myBooks);
 }
 
 function addBook() {
@@ -25,13 +23,12 @@ function addBook() {
     author: document.getElementById('authorName').value,
   };
   myBooks.push(book);
-  console.log(myBooks);
   localStorage.setItem('myBooks', JSON.stringify(myBooks));
   if (myBooks.length > 0) {
     showBooks(myBooks);
   }
   display.addEventListener('click', (e) => {
-    if(e.target.classList.contains('removeBtn')){
+    if (e.target.classList.contains('removeBtn')) {
       removeBook(e);
     }
   });
@@ -49,7 +46,7 @@ window.addEventListener('load', () => {
   }
 
   display.addEventListener('click', (e) => {
-    if(e.target.classList.contains('removeBtn')){
+    if (e.target.classList.contains('removeBtn')) {
       removeBook(e);
     }
   });
