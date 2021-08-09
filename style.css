@@ -1,0 +1,29 @@
+  body {
+    margin: 0;
+    padding: 0;
+}
+
+  h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 20%;
+}
+
+form .inputText {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+form .submitBtn {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100px;
+}
