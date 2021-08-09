@@ -10,8 +10,11 @@ function showBooks(books) {
 
 function removeBook(ev) {
   const buttonId = ev.target.id;
-  myBooks = myBooks.filter((y) => y !== myBooks[myBooks.findIndex(
-    (x) => x.id === parseInt(buttonId, 10))]);
+  myBooks = myBooks.filter(
+    (y) => y !== myBooks[myBooks.findIndex(
+     (x) => x.id === parseInt(buttonId, 10),
+    )],
+  );
   localStorage.setItem('myBooks', JSON.stringify(myBooks));
   showBooks(myBooks);
 }
