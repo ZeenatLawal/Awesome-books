@@ -4,7 +4,7 @@ const display = document.getElementById('display');
 let myBooks = [];
 
 function showBooks(books) {
-  const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button'>Remove Book</button></li>`).join('');
+  const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></li>`).join('');
   display.innerHTML = `${listBook}`;
 }
 
@@ -22,6 +22,17 @@ function addBook() {
   }
   form.reset();
 }
+
+window.addEventListener('load', () => {
+  const dataGet = localStorage.getItem('myBooks');
+  const data = JSON.parse(dataGet);
+  if (data) {
+    myBooks = data;
+  }
+  if (myBooks.length > 0) {
+    showBooks(myBooks);
+  }
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
