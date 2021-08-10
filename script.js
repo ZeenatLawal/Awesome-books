@@ -43,6 +43,12 @@ class Books {
   constructor() {
     this.myBooks = [];
   }
+
+ showBooks(books) {
+  const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></li>`).join('');
+  display.innerHTML = `${listBook}`;
+}
+
   addBook() {
   const book = {
     id: this.myBooks.length,
@@ -51,9 +57,9 @@ class Books {
   };
   this.myBooks.push(book);
   localStorage.setItem('myBooks', JSON.stringify(this.myBooks));
-  // if (myBooks.length > 0) {
-  //   showBooks(myBooks);
-  // }
+  if (this.myBooks.length > 0) {
+   this.showBooks(this.myBooks);
+  }
   // display.addEventListener('click', (e) => {
   //   if (e.target.classList.contains('removeBtn')) {
   //     removeBook(e);
