@@ -6,7 +6,6 @@ class Books {
     this.myBooks = [];
   }
 
-
   removeBook(ev) {
     const buttonId = ev.target.id;
     this.myBooks = this.myBooks.filter(
@@ -17,8 +16,6 @@ class Books {
     localStorage.setItem('myBooks', JSON.stringify(this.myBooks));
     this.showBooks(this.myBooks);
   }
-
-
 
   showBooks = (books) => {
     const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></li>`).join('');
