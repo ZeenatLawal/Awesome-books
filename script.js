@@ -1,16 +1,6 @@
 const form = document.getElementById('booksForm');
 const display = document.getElementById('display');
 
-// function removeBook(ev) {
-//   const buttonId = ev.target.id;
-//   myBooks = myBooks.filter(
-//     (y) => y !== myBooks[myBooks.findIndex(
-//      (x) => x.id === parseInt(buttonId, 10),
-//     )],
-//   );
-//   localStorage.setItem('myBooks', JSON.stringify(myBooks));
-//   showBooks(myBooks);
-// }
 class Books {
   constructor() {
     this.myBooks = [];
@@ -27,7 +17,7 @@ class Books {
     this.showBooks(this.myBooks);
   }
 
-  showBooks(books) {
+  showBooks = (books) => {
     const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></li>`).join('');
     display.innerHTML = `${listBook}`;
   }
@@ -54,22 +44,22 @@ class Books {
 
 const awesomeBook = new Books();
 
-// window.addEventListener('load', () => {
-//   const dataGet = localStorage.getItem('myBooks');
-//   const data = JSON.parse(dataGet);
-//   if (data) {
-//     myBooks = data;
-//   }
-//   if (myBooks.length > 0) {
-//     showBooks(myBooks);
-//   }
+window.addEventListener('load', () => {
+  const dataGet = localStorage.getItem('myBooks');
+  const data = JSON.parse(dataGet);
+  if (data) {
+    awesomeBook.myBooks = data;
+  }
+  if (awesomeBook.myBooks.length > 0) {
+    awesomeBook.showBooks(awesomeBook.myBooks);
+  }
 
-//   display.addEventListener('click', (e) => {
-//     if (e.target.classList.contains('removeBtn')) {
-//       removeBook(e);
-//     }
-//   });
-// });
+  display.addEventListener('click', (e) => {
+    if (e.target.classList.contains('removeBtn')) {
+      awesomeBook.removeBook(e);
+    }
+  });
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
