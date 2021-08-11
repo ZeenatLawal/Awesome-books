@@ -1,14 +1,49 @@
-body {
+body,
+header {
   margin: 0;
   padding: 0;
 }
+
+header nav {
+  display: flex;
+  /* flex-direction: row; */
+  height: 40px;
+  margin: 0;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 20px;
+}
+
+nav div .nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav div .nav-links li {
+  padding: 5px 10px;
+  font-size: 19px;
+  border-right: 1px solid black;
+}
+
+nav div .nav-links li:last-child {
+  border-right: none;
+}
+
+nav div .nav-links li:hover {
+  color: rgb(72, 72, 240);
+}
+/* nav div .nav-links li:nth-child() {
+  border-right: 1px solid black;
+} */
 
 h1 {
   text-align: center;
   margin: 10px;
 }
 
-ul {
+.displayBooks {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -18,14 +53,14 @@ ul {
   margin: 20px 25%;
 }
 
-ul li {
+.displayBooks li {
   display: flex;
   justify-content: space-between;
   padding: 10px 2%;
   width: 96%;
 }
 
-ul li .removeBtn {
+.displayBooks li .removeBtn {
   margin-left: 10px;
   padding: 7px;
   border-radius: 5px;
@@ -39,7 +74,7 @@ form .submitBtn {
   width: 100px;
 }
 
-ul li .removeBtn:hover,
+.displayBooks li .removeBtn:hover,
 form .submitBtn:hover {
   background-color: gray;
   color: white;
@@ -47,7 +82,7 @@ form .submitBtn:hover {
   transform: scale(1.1);
 }
 
-ul li:nth-child(even) {
+.displayBooks li:nth-child(even) {
   background-color: #f2f2f2;
 }
 
