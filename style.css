@@ -32,6 +32,13 @@ ul li .removeBtn {
   background-color: white;
 }
 
+form .submitBtn {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  width: 100px;
+}
+
 ul li .removeBtn:hover,
 form .submitBtn:hover {
   background-color: gray;
@@ -61,13 +68,6 @@ form .inputText {
 form .submit {
   display: flex;
   justify-content: flex-end;
-}
-
-form .submitBtn {
-  margin: 10px;
-  padding: 8px;
-  border-radius: 6px;
-  width: 100px;
 }
 
 hr {
