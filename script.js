@@ -18,7 +18,7 @@ class Books {
   }
 
   showBooks = (books) => {
-    const listBook = books.map((b) => `<li> ${b.title} by ${b.author} <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></li>`).join('');
+    const listBook = books.map((b) => `<li> ${b.title} by ${b.author}<div class="submit"> <button id='${b.id}' type='button' class="removeBtn">Remove Book</button></div></li>`).join('');
     display.innerHTML = `${listBook}`;
   }
 
