@@ -49,3 +49,9 @@ form .submitBtn {
   border-radius: 8px;
   width: 100px;
 }
+
+hr {
+  width: 20%;
+  height: 2px;
+  background-color: black;
+}
