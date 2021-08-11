@@ -39,7 +39,8 @@ nav div .nav-links a:hover {
   color: rgb(72, 72, 240);
 }
 
-h1 {
+h1,
+p {
   text-align: center;
   margin: 10px;
 }
@@ -117,4 +118,9 @@ hr {
 #contact,
 hr {
   display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
