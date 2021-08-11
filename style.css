@@ -6,7 +6,6 @@ header {
 
 header nav {
   display: flex;
-  /* flex-direction: row; */
   height: 40px;
   margin: 0;
   border: 1px solid black;
@@ -27,16 +26,18 @@ nav div .nav-links li {
   border-right: 1px solid black;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
 nav div .nav-links li:last-child {
   border-right: none;
 }
 
-nav div .nav-links li:hover {
+nav div .nav-links a:hover {
   color: rgb(72, 72, 240);
 }
-/* nav div .nav-links li:nth-child() {
-  border-right: 1px solid black;
-} */
 
 h1 {
   text-align: center;
@@ -109,4 +110,11 @@ hr {
   width: 20%;
   height: 2px;
   background-color: black;
+}
+
+#addBook,
+#allBooks,
+#contact,
+hr {
+  display: none;
 }

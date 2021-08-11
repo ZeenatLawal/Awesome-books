@@ -15,24 +15,38 @@
            </div>
            <div>
                <ul class="nav-links">
-                   <li>List</li>
-                   <li>Add New</li>
-                   <li>Contact</li>
+                   <li><a href="#allBooks">List</a></li>
+                   <li><a href="#addBook">Add New</a></li>
+                   <li><a href="#contact">Contact</a></li>
                 </ul>
            </div>
         </nav>
-    </header> 
-    <h1>All Awesome Books</h1>
-    <ul id="display" class="displayBooks"></ul>
+    </header>
+    <section>
+        <h1>Welcome to Awesome Books</h1>
+    </section>
+    <section id="allBooks">
+        <h1>All Awesome Books</h1>
+        <ul id="display" class="displayBooks"></ul>
+    </section>
     <hr>
-    <h1>Add a new book</h1>
-    <form id="booksForm">
-        <input type="text" id="bookName" placeholder="Enter Book name" class="inputText" required>
-        <input type="text" id="authorName" placeholder="Enter Author name" class="inputText" required>
-        <div class="submit">
-            <button type="submit" class="submitBtn" id="submitBtn">Add Books</button>
-        </div>
-    </form>
+    <section id="addBook">
+        <h1>Add a new book</h1>
+        <form id="booksForm">
+            <input type="text" id="bookName" placeholder="Enter Book name" class="inputText" required>
+            <input type="text" id="authorName" placeholder="Enter Author name" class="inputText" required>
+            <div class="submit">
+                <button type="submit" class="submitBtn" id="submitBtn">Add Books</button>
+            </div>
+        </form>
+    </section>
+    <section id="contact">
+        <h1>Contact information</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta earum facere veniam illum, voluptates mollitia libero quasi maiores natus amet recusandae asperiores eum, ratione reprehenderit, nulla exercitationem deserunt pariatur! Rerum!</p>
+    </section>
+    <footer>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora saepe quas in perspiciatis voluptas repellat, similique iure qui provident, officia consectetur explicabo! Laborum mollitia esse voluptatem doloremque incidunt autem tempora.</p>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
