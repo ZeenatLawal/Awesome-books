@@ -14,7 +14,12 @@ class Books {
       )],
     );
     localStorage.setItem('myBooks', JSON.stringify(this.myBooks));
+    if (this.myBooks.length === 0 ) {
+      display.innerHTML = `<li>There are no books. List is empty</li>`;
+    }
+    else {
     this.showBooks(this.myBooks);
+    }
   }
 
   showBooks = (books) => {
@@ -30,7 +35,10 @@ class Books {
     };
     this.myBooks.push(book);
     localStorage.setItem('myBooks', JSON.stringify(this.myBooks));
-    if (this.myBooks.length > 0) {
+    if(this.myBooks.length === 0) {
+      display.innerHTML = `<li>There are no books. List is empty</li>`;
+    }
+    else {
       this.showBooks(this.myBooks);
     }
     display.addEventListener('click', (e) => {
@@ -50,7 +58,10 @@ window.addEventListener('load', () => {
   if (data) {
     awesomeBook.myBooks = data;
   }
-  if (awesomeBook.myBooks.length > 0) {
+  if (awesomeBook.myBooks.length === 0) {
+    display.innerHTML = `<li>There are no books. List is empty.</li>`
+  }
+  else {
     awesomeBook.showBooks(awesomeBook.myBooks);
   }
 
