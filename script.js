@@ -1,5 +1,45 @@
 const form = document.getElementById('booksForm');
 const display = document.getElementById('display');
+const showList = document.getElementById('showList');
+const showAddNew = document.getElementById('showAddNew');
+const showContact = document.getElementById('showContact');
+const showWelcome = document.getElementById('showWelcome');
+const welcome = document.getElementById('welcomeSection');
+const listSection = document.getElementById('allBooks');
+const addSection = document.getElementById('addBook');
+const contact = document.getElementById('contact');
+const dateTime = document.getElementById('dateTime');
+
+const d = new Date();
+dateTime.innerHTML = d.toUTCString();
+
+showWelcome.addEventListener('click', () => {
+  welcome.style.display = 'block';
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+showList.addEventListener('click', () => {
+  welcome.style.display = 'none';
+  listSection.style.display = 'block';
+  addSection.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+showAddNew.addEventListener('click', () => {
+  welcome.style.display = 'none';
+  addSection.style.display = 'block';
+  listSection.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+showContact.addEventListener('click', () => {
+  welcome.style.display = 'none';
+  contact.style.display = 'block';
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+});
 
 class Books {
   constructor() {

@@ -8,17 +8,56 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <h1>All Awesome Books</h1>
-    <ul id="display" class="displayBooks"></ul>
+    <header>
+        <nav>
+           <div>
+               <h2><a href="#welcomeSection" id="showWelcome">Awesome Books</a></h2>
+           </div>
+           <div>
+               <ul class="nav-links">
+                   <li><a href="#allBooks" id="showList">List</a></li>
+                   <li><a href="#addBook" id="showAddNew">Add New</a></li>
+                   <li><a href="#contact" id="showContact">Contact</a></li>
+                </ul>
+           </div>
+        </nav>
+    </header>
+    <span id="dateTime"></span>
+    <section id="welcomeSection" class="welcomeSection">
+        <h1>Welcome to Awesome Books</h1>
+        <p>Use the navigation bar to move around the website.</p>
+    </section>
+    <section id="allBooks">
+        <h1>All Awesome Books</h1>
+        <ul id="display" class="displayBooks"></ul>
+    </section>
     <hr>
-    <h1>Add a new book</h1>
-    <form id="booksForm">
-        <input type="text" id="bookName" placeholder="Enter Book name" class="inputText" required>
-        <input type="text" id="authorName" placeholder="Enter Author name" class="inputText" required>
-        <div class="submit">
-            <button type="submit" class="submitBtn" id="submitBtn">Add Books</button>
-        </div>
-    </form>
+    <section id="addBook">
+        <h1>Add a new book</h1>
+        <form id="booksForm">
+            <input type="text" id="bookName" placeholder="Enter Book name" class="inputText" required>
+            <input type="text" id="authorName" placeholder="Enter Author name" class="inputText" required>
+            <div class="submit">
+                <button type="submit" class="submitBtn" id="submitBtn">Add Books</button>
+            </div>
+        </form>
+    </section>
+    <section id="contact" class="contact">
+        <h1>Contact information</h1>
+        <p>Do you have any questions or you just want to say "Hello"?
+            You can reach out to us!
+        </p>
+        <div class="contactInfo">
+        <ul>
+            <li>Our Email: zeenatlawal82@gmail.com or ridaarif16@gmail.com</li>
+            <li>Our phone number: 0043589691642</li>
+            <li>Our address: WeiterStadt Weg 2, Griesheim</li>
+        </ul>
+    </div>
+    </section>
+    <footer>
+        <p>Copyright 2021</p>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

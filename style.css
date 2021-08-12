@@ -1,14 +1,83 @@
-body {
+body,
+header {
   margin: 0;
   padding: 0;
+  background-color: #f3efca;
+  color: #02231c;
 }
 
-h1 {
+header nav {
+  display: flex;
+  height: 40px;
+  margin: 0;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 20px;
+}
+
+nav div .nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.displayBooks li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2%;
+  width: 96%;
+}
+
+nav div .nav-links li {
+  padding: 5px 10px;
+  font-size: 19px;
+  border-right: 1px solid black;
+}
+
+h2 a,
+.nav-links a {
+  text-decoration: none;
+  color: #02231c;
+}
+
+.displayBooks li:nth-child(even) {
+  background-color: #f4f2b1;
+}
+
+nav div .nav-links li:last-child {
+  border-right: none;
+}
+
+nav div .nav-links a:hover {
+  color: rgb(72, 72, 240);
+}
+
+span {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2px 15px;
+}
+
+h1,
+p {
   text-align: center;
   margin: 10px;
 }
 
-ul {
+.welcomeSection h1 {
+  padding: 30px 5px;
+  font-size: 30px;
+  letter-spacing: 0.03rem;
+}
+
+.welcomeSection p {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03rem;
+}
+
+.displayBooks {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -18,14 +87,7 @@ ul {
   margin: 20px 25%;
 }
 
-ul li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 2%;
-  width: 96%;
-}
-
-ul li .removeBtn {
+.displayBooks li .removeBtn {
   margin-left: 10px;
   padding: 7px;
   border-radius: 5px;
@@ -39,16 +101,12 @@ form .submitBtn {
   width: 100px;
 }
 
-ul li .removeBtn:hover,
+.displayBooks li .removeBtn:hover,
 form .submitBtn:hover {
-  background-color: gray;
+  background-color: #1c2c58;
   color: white;
   font-size: 14px;
   transform: scale(1.1);
-}
-
-ul li:nth-child(even) {
-  background-color: #f2f2f2;
 }
 
 form {
@@ -74,4 +132,40 @@ hr {
   width: 20%;
   height: 2px;
   background-color: black;
+}
+
+.contact h1 {
+  font-size: 25px;
+  padding: 5px;
+  line-height: 30px;
+  letter-spacing: 0.02rem;
+}
+
+.contact p {
+  font-size: 20px;
+  padding: 5px;
+  line-height: 28px;
+  letter-spacing: 0.02rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px;
+  letter-spacing: 0.02rem;
+  line-height: 28px;
+}
+
+#addBook,
+#allBooks,
+#contact,
+hr {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
