@@ -2,6 +2,8 @@ body,
 header {
   margin: 0;
   padding: 0;
+  background-color: #f3efca;
+  color: #02231c;
 }
 
 header nav {
@@ -26,17 +28,36 @@ nav div .nav-links li {
   border-right: 1px solid black;
 }
 
+h2 a,
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: #02231c;
 }
 
 nav div .nav-links li:last-child {
   border-right: none;
 }
-
+h2 a,
 nav div .nav-links a:hover {
   color: rgb(72, 72, 240);
+}
+
+span {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2px 15px;
+}
+
+.welcomeSection h1 {
+  padding: 30px 5px;
+  font-size: 30px;
+  letter-spacing: 0.03rem;
+}
+
+.welcomeSection p {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03rem;
 }
 
 h1,
@@ -78,14 +99,14 @@ form .submitBtn {
 
 .displayBooks li .removeBtn:hover,
 form .submitBtn:hover {
-  background-color: gray;
+  background-color: #1c2c58;
   color: white;
   font-size: 14px;
   transform: scale(1.1);
 }
 
 .displayBooks li:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f4f2b1;
 }
 
 form {
@@ -111,6 +132,30 @@ hr {
   width: 20%;
   height: 2px;
   background-color: black;
+}
+
+.contact h1 {
+  font-size: 25px;
+  padding: 5px;
+  line-height: 30px;
+  letter-spacing: 0.02rem;
+}
+
+.contact p {
+  font-size: 20px;
+  padding: 5px;
+  line-height: 28px;
+  letter-spacing: 0.02rem;
+}
+
+.contactInfo {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-size: 20px;
+ padding: 5px;
+ letter-spacing: 0.02rem;
+ line-height: 28px;
 }
 
 #addBook,
