@@ -37,7 +37,7 @@ h2 a,
 nav div .nav-links li:last-child {
   border-right: none;
 }
-h2 a,
+
 nav div .nav-links a:hover {
   color: rgb(72, 72, 240);
 }
