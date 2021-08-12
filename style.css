@@ -22,6 +22,13 @@ nav div .nav-links {
   list-style-type: none;
 }
 
+.displayBooks li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2%;
+  width: 96%;
+}
+
 nav div .nav-links li {
   padding: 5px 10px;
   font-size: 19px;
@@ -32,6 +39,10 @@ h2 a,
 .nav-links a {
   text-decoration: none;
   color: #02231c;
+}
+
+.displayBooks li:nth-child(even) {
+  background-color: #f4f2b1;
 }
 
 nav div .nav-links li:last-child {
@@ -48,6 +59,12 @@ span {
   padding: 2px 15px;
 }
 
+h1,
+p {
+  text-align: center;
+  margin: 10px;
+}
+
 .welcomeSection h1 {
   padding: 30px 5px;
   font-size: 30px;
@@ -60,12 +77,6 @@ span {
   letter-spacing: 0.03rem;
 }
 
-h1,
-p {
-  text-align: center;
-  margin: 10px;
-}
-
 .displayBooks {
   list-style-type: none;
   display: flex;
@@ -74,13 +85,6 @@ p {
   border: 1px solid black;
   padding: 0;
   margin: 20px 25%;
-}
-
-.displayBooks li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 2%;
-  width: 96%;
 }
 
 .displayBooks li .removeBtn {
@@ -103,10 +107,6 @@ form .submitBtn:hover {
   color: white;
   font-size: 14px;
   transform: scale(1.1);
-}
-
-.displayBooks li:nth-child(even) {
-  background-color: #f4f2b1;
 }
 
 form {
@@ -149,13 +149,13 @@ hr {
 }
 
 .contactInfo {
- display: flex;
- flex-direction: column;
- align-items: center;
- font-size: 20px;
- padding: 5px;
- letter-spacing: 0.02rem;
- line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px;
+  letter-spacing: 0.02rem;
+  line-height: 28px;
 }
 
 #addBook,
