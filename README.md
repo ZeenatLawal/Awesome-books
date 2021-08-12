@@ -8,6 +8,9 @@
 - CSS
 - JavaScript
 
+## Home Page
+![screenshot](./Homepage.png)
+
 ## Live demo
 
 [Live demo link](https://ridaarif98.github.io/awseomeBooks-m2/)
